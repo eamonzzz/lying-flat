@@ -8,11 +8,13 @@ allprojects {
     // 提供 API 包管理支持
     apply plugin: 'java-library'
 
-    group 'org.eamonzzz'
-    version '1.0'
+    sourceCompatibility = '11'
 }
 
 subprojects {
+    group 'org.eamonzzz'
+    version '1.0'
+
     repositories {
         maven { url 'https://maven.aliyun.com/repository/public/' }
         mavenCentral()

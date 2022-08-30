@@ -1,2 +1,4 @@
 rootProject.name = 'lying-flat'
+include 'netty:springboot-netty-simple'
+findProject(':netty:springboot-netty-simple')?.name = 'springboot-netty-simple'
 
