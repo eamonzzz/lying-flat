@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    // 提供 API 包管理支持
+    apply plugin: 'java-library'
+
+    group 'org.eamonzzz'
+    version '1.0'
+}
+
+subprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    }
+    test {
+        useJUnitPlatform()
+    }
+}
+
+
